@@ -29,14 +29,22 @@ GameplayCoreSceneSetupData * gameplayCoreSceneSetupData;
 //#define MakeDelegate(DelegateType, ...) (il2cpp_utils::MakeDelegate<DelegateType>(classof(DelegateType), __VA_ARGS__))
 
 MAKE_HOOK_MATCH(StandardLevelScenesTransitionSetupDataSO_Init, &StandardLevelScenesTransitionSetupDataSO::Init,
-                void, StandardLevelScenesTransitionSetupDataSO *self, ::StringW gameMode,
-                ::GlobalNamespace::IDifficultyBeatmap* difficultyBeatmap, ::GlobalNamespace::IPreviewBeatmapLevel* previewBeatmapLevel,
-                ::GlobalNamespace::OverrideEnvironmentSettings* overrideEnvironmentSettings,
-                ::GlobalNamespace::ColorScheme* overrideColorScheme, ::GlobalNamespace::GameplayModifiers* gameplayModifiers,
-                ::GlobalNamespace::PlayerSpecificSettings* playerSpecificSettings, ::GlobalNamespace::PracticeSettings* practiceSettings,
-                ::StringW backButtonText, bool useTestNoteCutSoundEffects, bool startPaused) {
+                void, StandardLevelScenesTransitionSetupDataSO *self, 
+                StringW gameMode, 
+                GlobalNamespace::IDifficultyBeatmap *difficultyBeatmap, 
+                GlobalNamespace::IPreviewBeatmapLevel *previewBeatmapLevel,
+                GlobalNamespace::OverrideEnvironmentSettings *overrideEnvironmentSettings,
+                GlobalNamespace::ColorScheme *overrideColorScheme,
+                GlobalNamespace::GameplayModifiers *gameplayModifiers,
+                GlobalNamespace::PlayerSpecificSettings *playerSpecificSettings,
+                GlobalNamespace::PracticeSettings *practiceSettings,
+                StringW backButtonText,
+                bool useTestNoteCutSoundEffects,
+                bool startPaused,
+                GlobalNamespace::BeatmapDataCache *beatmapDataCache
+    ) {
     StandardLevelScenesTransitionSetupDataSO_Init(self, gameMode, difficultyBeatmap, previewBeatmapLevel, overrideEnvironmentSettings, overrideColorScheme,
-                                                  gameplayModifiers, playerSpecificSettings, practiceSettings, backButtonText, useTestNoteCutSoundEffects, startPaused);
+                                                  gameplayModifiers, playerSpecificSettings, practiceSettings, backButtonText, useTestNoteCutSoundEffects, startPaused, beatmapDataCache);
 
     TracksStatic::bpmController = nullptr;
 

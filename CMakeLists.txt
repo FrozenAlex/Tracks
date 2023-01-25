@@ -13,6 +13,8 @@ set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
 set(SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # compile options used
 add_compile_options(-frtti -fexceptions)
 add_compile_options(-O3)
